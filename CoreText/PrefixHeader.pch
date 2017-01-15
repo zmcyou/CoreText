@@ -1,0 +1,17 @@
+//
+//  PrefixHeader.pch
+//  CoreText
+//
+//  Created by Bill on 1/15/17.
+//  Copyright © 2017 zmcyou. All rights reserved.
+//
+
+//$(SRCROOT)/$(PROJECT_NAME)/ProjectName-Prefix.pch 路径
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import <UIKit/UIKit.h>
+#import <CoreText/CoreText.h>
+
+#endif /* PrefixHeader_pch */
