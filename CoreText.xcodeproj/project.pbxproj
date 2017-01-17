@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D2A71491E2DAC5300DAC5F2 /* XMFontFeature.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D2A71481E2DAC5300DAC5F2 /* XMFontFeature.m */; };
+		0D6868B51E2DE753006A4DBA /* XMExclusionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6868B41E2DE753006A4DBA /* XMExclusionView.m */; };
+		0D6868B81E2E1588006A4DBA /* XMTextStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6868B71E2E1588006A4DBA /* XMTextStorage.m */; };
 		37C5973C1E2BCBB700D0B37D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C5973B1E2BCBB700D0B37D /* main.m */; };
 		37C5973F1E2BCBB700D0B37D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C5973E1E2BCBB700D0B37D /* AppDelegate.m */; };
 		37C597421E2BCBB700D0B37D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C597411E2BCBB700D0B37D /* ViewController.m */; };
@@ -17,6 +20,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D2A71471E2DAC5300DAC5F2 /* XMFontFeature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMFontFeature.h; sourceTree = "<group>"; };
+		0D2A71481E2DAC5300DAC5F2 /* XMFontFeature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMFontFeature.m; sourceTree = "<group>"; };
+		0D6868B31E2DE753006A4DBA /* XMExclusionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMExclusionView.h; sourceTree = "<group>"; };
+		0D6868B41E2DE753006A4DBA /* XMExclusionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMExclusionView.m; sourceTree = "<group>"; };
+		0D6868B61E2E1588006A4DBA /* XMTextStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMTextStorage.h; sourceTree = "<group>"; };
+		0D6868B71E2E1588006A4DBA /* XMTextStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMTextStorage.m; sourceTree = "<group>"; };
 		37C597371E2BCBB700D0B37D /* CoreText.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreText.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37C5973B1E2BCBB700D0B37D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		37C5973D1E2BCBB700D0B37D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -67,6 +76,12 @@
 				37C5973E1E2BCBB700D0B37D /* AppDelegate.m */,
 				37C597401E2BCBB700D0B37D /* ViewController.h */,
 				37C597411E2BCBB700D0B37D /* ViewController.m */,
+				0D2A71471E2DAC5300DAC5F2 /* XMFontFeature.h */,
+				0D2A71481E2DAC5300DAC5F2 /* XMFontFeature.m */,
+				0D6868B31E2DE753006A4DBA /* XMExclusionView.h */,
+				0D6868B41E2DE753006A4DBA /* XMExclusionView.m */,
+				0D6868B61E2E1588006A4DBA /* XMTextStorage.h */,
+				0D6868B71E2E1588006A4DBA /* XMTextStorage.m */,
 				37C597431E2BCBB800D0B37D /* Main.storyboard */,
 				37C597461E2BCBB800D0B37D /* Assets.xcassets */,
 				37C597481E2BCBB800D0B37D /* LaunchScreen.storyboard */,
@@ -124,7 +139,8 @@
 				TargetAttributes = {
 					37C597361E2BCBB700D0B37D = {
 						CreatedOnToolsVersion = 8.2.1;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = E54DFEZM7P;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -165,7 +181,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				37C597421E2BCBB700D0B37D /* ViewController.m in Sources */,
+				0D6868B81E2E1588006A4DBA /* XMTextStorage.m in Sources */,
 				37C5973F1E2BCBB700D0B37D /* AppDelegate.m in Sources */,
+				0D6868B51E2DE753006A4DBA /* XMExclusionView.m in Sources */,
+				0D2A71491E2DAC5300DAC5F2 /* XMFontFeature.m in Sources */,
 				37C5973C1E2BCBB700D0B37D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,10 +307,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				DEVELOPMENT_TEAM = E54DFEZM7P;
 				INFOPLIST_FILE = CoreText/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zmcyou.CoreText;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -299,10 +322,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				DEVELOPMENT_TEAM = E54DFEZM7P;
 				INFOPLIST_FILE = CoreText/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zmcyou.CoreText;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
@@ -325,6 +352,7 @@
 				37C597501E2BCBB800D0B37D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
