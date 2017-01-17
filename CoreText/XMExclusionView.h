@@ -10,6 +10,6 @@
 
 @interface XMExclusionView : UIView
 
-@property (strong, nonatomic) UIBezierPath *roundPath;
+- (UIBezierPath *)roundPathWithOrigin:(CGPoint)origin;
 
 @end

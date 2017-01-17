@@ -10,16 +10,12 @@
 
 @implementation XMExclusionView
 
-- (UIBezierPath *)roundPath
+- (UIBezierPath *)roundPathWithOrigin:(CGPoint)origin
 {
-    if (_roundPath == nil)
-    {
-        CGSize size = self.bounds.size;
-        CGFloat radius = MAX(size.width, size.height) * 0.5 - 3;
-        _roundPath = [UIBezierPath bezierPathWithArcCenter:CGPointMake(size.width / 2, size.height / 2) radius:radius startAngle:0 endAngle:M_PI * 2 clockwise:YES];
-    }
-    
-    return _roundPath;
+    CGSize size = self.bounds.size;
+    CGFloat radius = MAX(size.width, size.height) * 0.5 - 3;
+    UIBezierPath *roundPath = [UIBezierPath bezierPathWithArcCenter:origin radius:radius startAngle:0 endAngle:M_PI * 2 clockwise:YES];
+    return roundPath;
 }
 
 - (void)drawRect:(CGRect)rect {
@@ -27,7 +23,7 @@
     CGContextRef currentContext = UIGraphicsGetCurrentContext();
     CGContextSetShouldAntialias(currentContext, YES);
     [[UIColor blueColor] setFill];
-    [self.roundPath fill];
+    [[self roundPathWithOrigin:CGPointMake(rect.size.width / 2, rect.size.height / 2)] fill];
 }
 
 @end
