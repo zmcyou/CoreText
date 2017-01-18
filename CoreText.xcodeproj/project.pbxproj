@@ -10,6 +10,7 @@
 		0D2A71491E2DAC5300DAC5F2 /* XMFontFeature.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D2A71481E2DAC5300DAC5F2 /* XMFontFeature.m */; };
 		0D6868B51E2DE753006A4DBA /* XMExclusionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6868B41E2DE753006A4DBA /* XMExclusionView.m */; };
 		0D6868B81E2E1588006A4DBA /* XMTextStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6868B71E2E1588006A4DBA /* XMTextStorage.m */; };
+		0DC248C31E2F5E800024E6A1 /* textkit.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DC248C21E2F5E800024E6A1 /* textkit.png */; };
 		37C5973C1E2BCBB700D0B37D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C5973B1E2BCBB700D0B37D /* main.m */; };
 		37C5973F1E2BCBB700D0B37D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C5973E1E2BCBB700D0B37D /* AppDelegate.m */; };
 		37C597421E2BCBB700D0B37D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C597411E2BCBB700D0B37D /* ViewController.m */; };
@@ -26,6 +27,7 @@
 		0D6868B41E2DE753006A4DBA /* XMExclusionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMExclusionView.m; sourceTree = "<group>"; };
 		0D6868B61E2E1588006A4DBA /* XMTextStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMTextStorage.h; sourceTree = "<group>"; };
 		0D6868B71E2E1588006A4DBA /* XMTextStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMTextStorage.m; sourceTree = "<group>"; };
+		0DC248C21E2F5E800024E6A1 /* textkit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = textkit.png; sourceTree = "<group>"; };
 		37C597371E2BCBB700D0B37D /* CoreText.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreText.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37C5973B1E2BCBB700D0B37D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		37C5973D1E2BCBB700D0B37D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				0D6868B41E2DE753006A4DBA /* XMExclusionView.m */,
 				0D6868B61E2E1588006A4DBA /* XMTextStorage.h */,
 				0D6868B71E2E1588006A4DBA /* XMTextStorage.m */,
+				0DC248C21E2F5E800024E6A1 /* textkit.png */,
 				37C597431E2BCBB800D0B37D /* Main.storyboard */,
 				37C597461E2BCBB800D0B37D /* Assets.xcassets */,
 				37C597481E2BCBB800D0B37D /* LaunchScreen.storyboard */,
@@ -170,6 +173,7 @@
 				37C5974A1E2BCBB800D0B37D /* LaunchScreen.storyboard in Resources */,
 				37C597471E2BCBB800D0B37D /* Assets.xcassets in Resources */,
 				37C597451E2BCBB800D0B37D /* Main.storyboard in Resources */,
+				0DC248C31E2F5E800024E6A1 /* textkit.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

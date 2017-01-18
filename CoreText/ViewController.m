@@ -30,15 +30,23 @@
 - (void)testExclusionPath
 {
     
-    _exclusionView = [[XMExclusionView alloc] initWithFrame:CGRectMake(self.view.bounds.size.width - 60, 0, 60, 60)];
+    _exclusionView = [[XMExclusionView alloc] initWithFrame:CGRectMake(self.view.bounds.size.width - 60, 0, 80, 80)];
     _exclusionView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:_exclusionView];
     
     NSDictionary *attrs = @{NSFontAttributeName : [UIFont preferredFontForTextStyle:UIFontTextStyleBody]};
-    NSString *string = @"fefmoo;iefj,fjieopifjpaweifjpoiawjfpoiawjfpoiawepoijawepofjapoiejfpaoiwjfpoiwefpoiwjfipowpfiojaews;lkfjaskfjkals;fadslkjsd;lfa;dlkj;lksjepofijwep9ofujioejfipoejfpoeijfpoiwejfpoiwejpofijwepoifjpwoijfpoiwejfpoiwejfiowejfoiwejfoifefmoo;iefj,fjieopifjpaweifjpoiawjfpoiawjfpoiawepoijawepofjapoiejfpaoiwjfpoiwefpoiwjfipowpfiojaews;lkfjaskfjkals;fadslkjsd;lfa;dlkj;lksjepofijwep9ofujioejfipoejfpoeijfpoiwejfpoiwejpofijwepoifjpwoijfpoiwejfpoiwejfiowejfoiwejfoikals;fadslkjsd;lfa;dlkj;lksjepofijwep9ofujioejfipoejfpoeijfpoiwejfpoiwejpofijwepoifjpwoijfpoiwejfpoiwejfiowejfoiwejfoi我是一个";
+    
+    //文字
+    NSString *string = @"Notes on iOS7\nThis is a big change in the UI design, it's going to take a *lot* of getting used to!";
+    
+    //图片
+    NSTextAttachment *textAttachment = [[NSTextAttachment alloc] init];
+    textAttachment.image = [UIImage imageNamed:@"textkit"];
+    NSAttributedString *imageString = [NSAttributedString attributedStringWithAttachment:textAttachment];
     
     _textStorage = [XMTextStorage new];
     [_textStorage appendAttributedString:[[NSAttributedString alloc] initWithString:string attributes:attrs]];
+    [_textStorage appendAttributedString:imageString];
     
     NSLayoutManager *manager = [[NSLayoutManager alloc] init];
     
@@ -55,6 +63,7 @@
    
     [self.view insertSubview:_textView atIndex:0];
     
+    //需要加上这两行代码，在文字高度大于textView高度的时候，才能显示完全（不明所以）
     _textView.scrollEnabled = NO;
     _textView.scrollEnabled = YES;
 }

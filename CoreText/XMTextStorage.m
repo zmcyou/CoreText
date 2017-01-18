@@ -57,4 +57,49 @@
     [self endEditing];
 }
 
+#pragma dynamic formatting
+//当text发生变化时，通知layoutmanager
+- (void)processEditing
+{
+    [self performReplacementsForRange:self.editedRange];
+    [super processEditing];
+}
+
+//当编辑textview时，changedRange一般就是一个字符
+- (void)performReplacementsForRange:(NSRange)changedRange
+{
+    NSRange lineRange1 = [[_backingStore string] lineRangeForRange:NSMakeRange(changedRange.location, 0)];
+    NSRange extendedRange = NSUnionRange(lineRange1, changedRange);
+    
+    NSRange lineRange2 = [[_backingStore string] lineRangeForRange:NSMakeRange(NSMaxRange(changedRange), 0)];
+    
+    [self applyStylesToRange:NSUnionRange(extendedRange, lineRange2)];
+}
+
+- (void)applyStylesToRange:(NSRange)searchRange
+{
+    UIFontDescriptor *fontDescriptor = [UIFontDescriptor preferredFontDescriptorWithTextStyle:UIFontTextStyleBody];
+    UIFontDescriptor *boldFontDescriptor = [fontDescriptor fontDescriptorWithSymbolicTraits:UIFontDescriptorTraitBold];
+    
+    UIFont *normalFont = [UIFont fontWithDescriptor:fontDescriptor size:0];
+    UIFont *boldFont = [UIFont fontWithDescriptor:boldFontDescriptor size:0];
+    
+    NSDictionary *normalAttributes = @{NSFontAttributeName:normalFont};
+    NSDictionary *boldAttributes = @{NSFontAttributeName:boldFont};
+    
+    NSString *regexStr = @"\\*\\w+(\\s\\w+)*\\*";
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:regexStr options:0 error:nil];
+    [regex enumerateMatchesInString:[_backingStore string] options:0 range:searchRange usingBlock:^(NSTextCheckingResult *match, NSMatchingFlags flags, BOOL *stop){
+        
+        NSRange matchRange = match.range;
+        [self addAttributes:boldAttributes range:matchRange];
+        
+        //剩下的恢复原来的属性
+        if (NSMaxRange(matchRange) + 1 < self.length)
+        {
+            [self addAttributes:normalAttributes range:NSMakeRange(NSMaxRange(matchRange) + 1, 1)];
+        }
+    }];
+}
+
 @end
